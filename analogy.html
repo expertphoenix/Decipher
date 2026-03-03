@@ -1,16 +1,47 @@
 <!DOCTYPE html>
 <html>
 <head>
+    <title>The longest English word without a vowel</title>
     <style>
-        h1 p h2 h3 {font-family: 'Times New Roman', Times, serif;}
-        img {width: 400px;}
-        p{margin-left: 20%; font-size: 4;}
+        
+        h1, p, h2, h3 { font-family: 'Times New Roman', Times, serif; }
+        img { width: 400px; display: block; margin: 20px auto; }
+        p { margin-left: 20%; font-size: 15px; }
+        
+        #playBtn {padding: 10px 20px;font-size: 18px;cursor: pointer;display: block;margin: 10px auto;}
+        #nowPlaying {display: none; font-size: 24px; margin-left: 0%;}
     </style>
 </head>
-<title>The longest English word without a vowel</title>
 <body bgcolor="#FFFFFF" text="#000000">
+
 <p style="margin-left: 10%;">7.</p>
-<p>Get stickbugged, I guess?<p></center>
+
+<audio id="myAudio">
+  <source src="get stickbugged lol.mp3" type="audio/mpeg">
+</audio>
+
+<div style="text-align: center;">
+    <button id="playBtn">Play</button>
+    
+    <center><p id="nowPlaying" style="display: none;">
+      get stickbugged lol
+    </p></center>
+    <p style="color: #fffff6; margin-left: 0%">this sound is a red herring xd</p>
+</div>
+
 <img src="img/stick nymph.webp" alt="Stick Nymph">
+
+<script>
+    const playBtn = document.getElementById('playBtn');
+    const audio = document.getElementById('myAudio');
+    const text = document.getElementById('nowPlaying');
+
+    playBtn.addEventListener('click', function() {
+        audio.play();
+        text.style.display = 'block';
+        playBtn.style.display = 'none';
+    });
+</script>
+
 </body>
 </html>
